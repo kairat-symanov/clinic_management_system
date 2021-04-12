@@ -1,0 +1,17 @@
+<div class="col-sm-3 col-inner-left">
+  <div class="center-services">
+    <div class="center-services-header">
+      <span class="services-header-title"><h3>Услуги</h3></span>
+      <div class="services-content">
+        <ul class="organization-services-list">
+      <% @categories.each do |category| %>
+        <tr>
+          <li><td><%= link_to category.title, category_path(category) %></td></li>
+        </tr>
+      <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

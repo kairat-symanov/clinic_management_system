@@ -1,0 +1,27 @@
+<!--<table class="table">-->
+
+<!--  <h3><%#= @category.description %></h3>-->
+
+
+
+<!--</table>-->
+<br>
+<br>
+<table class="table table-hover-sm">
+  <thead class="table-dark">
+  <tr>
+    <th scope="col"><%= @category.title %></th>
+    <th scope="col">Врач</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row"><%= @category.description %></th>
+    <td>Jacob</td>
+  </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Редактировать', edit_category_path(@category) %>
+|
+<%= link_to 'Удалить', category_path(@category), method: :delete, data: { confirm: 'Вы уверены?' } %>
