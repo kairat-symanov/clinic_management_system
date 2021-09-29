@@ -1,18 +1,22 @@
-<table class="table table-hover-sm">
-  <thead class="table-dark">
-  <tr>
-    <th scope="col"><%= @category.title %></th>
-    <th scope="col">Врач</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <th scope="row"><%= @category.description %></th>
-    <td>Jacob</td>
-  </tr>
-  </tbody>
-</table>
+<div class="col-sm-12 uslugi-tab">
+  <table class="table table-hover-sm">
+    <thead class="table-dark uslugi-tab-title">
+      <tr>
+        <th><%= @category.title %></th>
+        <th>Врач</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @category.description %></td>
+        <td>Jacob</td>
+      </tr>
+    </tbody>
+  </table>
 
-<%= link_to 'Редактировать', edit_category_path(@category) %>
-|
-<%= link_to 'Удалить', category_path(@category), method: :delete, data: { confirm: 'Вы уверены?' } %>
+  <%= link_to 'Редактировать', edit_category_path(@category), class: 'btn btn-primary' %>
+  |
+  <%= link_to 'Удалить', category_path(@category), method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-primary' %>
+  |
+  <%= link_to 'Назад', categories_path(@category), class: 'btn btn-primary' %>
+</div>
