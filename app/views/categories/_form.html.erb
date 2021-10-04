@@ -1,17 +1,19 @@
-<%= form_for @category do |f| %>
+<div class="col-md-8">
+  <%= form_for @category do |f| %>
 
-  <div class="form-control">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <div class="form-group">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
 
-  <div class="form-control">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
+    <div class="form-group">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
 
-  <div class="form-control">
-    <%= f.submit 'Сохранить' %>
-  </div>
+    <div class="form-group">
+      <%= f.submit 'Сохранить' %>
+    </div>
 
-<% end %>
+  <% end %>
+</div>
